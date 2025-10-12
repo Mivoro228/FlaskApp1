@@ -60,6 +60,15 @@ def register():
         flash('Registration successful')
         return redirect(url_for('login'))
     return render_template('register.html', title= 'Register', form=form)
+@app.route('/user/<username>')
+@login_required
+def user(username):
+    user = db.first_or_404(sa.Select(User).where(User.username == username))
+    posts = [
+        {'author' : user, 'body': 'Test post #1'},
+        {'author' : user, 'body': 'Test post #2'}
+    ]
+    return render_template('user.html', posts = posts, user=user)
 @app.route('/logout', methods=['GET', 'POST'])
 def logout():
     logout_user()
