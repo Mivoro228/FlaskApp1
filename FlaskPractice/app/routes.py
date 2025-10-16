@@ -2,7 +2,8 @@ from flask import render_template, flash, redirect, url_for, request
 #-*- coding: utf-8 -*-
 from app import app
 import sqlalchemy as sa
-from app.forms import LoginForm, RegistrationForm
+from datetime import datetime, timezone
+from app.forms import LoginForm, RegistrationForm, EditProfileForm
 from flask_login import current_user, login_user, logout_user, login_required
 from urllib.parse import urlsplit
 from app import db
@@ -24,7 +25,7 @@ def index():
             'body': 'Geopolitics in Russia'
         },
         {
-            'author':{'username': 'king-kong'},
+            'author':{'userna me': 'king-kong'},
             'body': 'GRaaaaa'
         }
     ]
@@ -73,3 +74,22 @@ def user(username):
 def logout():
     logout_user()
     return redirect(url_for('index'))
+@app.before_request
+def before_request():
+    if current_user.is_authenticated:
+        current_user.last_seen = datetime.now(timezone.utc)
+        db.session.commit()
+@app.route('/edit_profile', methods= ['GET','POST'])
+@login_required
+def edit_profile():
+    form = EditProfileForm(current_user.username)
+    if form.validate_on_submit():
+        current_user.username = form.username.data
+        current_user.about_me = form.about_me.data
+        db.session.commit()
+        flash('Your changes have been saved.')
+        return redirect(url_for('edit_profile'))
+    elif request.method == 'GET':
+        form.username.data = current_user.username
+        form.about_me.data = current_user.about_me
+    return render_template('edit_profile.html', title='Edit Profile', form=form)

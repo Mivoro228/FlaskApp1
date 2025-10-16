@@ -1,0 +1,43 @@
+2025-10-16 18:00:29,845 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-16 18:00:38,955 ERROR: Exception on /edit_profile [GET] [in C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Miha\BankApp2\FlaskPractice\app\routes.py", line 85, in edit_profile
+    form = EditProfileForm()
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\wtforms\form.py", line 209, in __call__
+    return type.__call__(cls, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+TypeError: EditProfileForm.__init__() missing 1 required positional argument: 'original_username'
+2025-10-16 18:02:00,680 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-16 18:02:07,379 ERROR: Exception on /edit_profile [GET] [in C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Miha\BankApp2\FlaskPractice\app\routes.py", line 85, in edit_profile
+    form = EditProfileForm()
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\wtforms\form.py", line 209, in __call__
+    return type.__call__(cls, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+TypeError: EditProfileForm.__init__() missing 1 required positional argument: 'original_username'
+2025-10-16 18:03:30,201 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
