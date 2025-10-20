@@ -41,3 +41,9 @@ Traceback (most recent call last):
            ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
 TypeError: EditProfileForm.__init__() missing 1 required positional argument: 'original_username'
 2025-10-16 18:03:30,201 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-19 12:12:33,173 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-20 21:58:19,188 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-20 21:58:25,766 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-20 21:58:47,841 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-20 21:59:04,740 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-20 21:59:16,874 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
