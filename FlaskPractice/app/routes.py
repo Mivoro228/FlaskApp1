@@ -7,29 +7,23 @@ from app.forms import LoginForm, RegistrationForm, EditProfileForm
 from flask_login import current_user, login_user, logout_user, login_required
 from urllib.parse import urlsplit
 from app import db
-from app.models import User
+from app.models import User, Post
+from app.forms import EmptyForm, PostForm
 
 #...
 
-@app.route('/')
-@app.route('/index')
+@app.route('/', methods=['GET', 'POST'])
+@app.route('/index', methods=['GET', 'POST'])
 @login_required
 def index():
-    posts = [
-        {
-            'author': {'username' : 'Miha'},
-            'body':'Big sus in New-York City'
-        },
-        {
-            'author': {'username': 'Putin'},
-            'body': 'Geopolitics in Russia'
-        },
-        {
-            'author':{'userna me': 'king-kong'},
-            'body': 'GRaaaaa'
-        }
-    ]
-    return  render_template('index.html', title ='Home Page', posts = posts)
+    form=PostForm()
+    if form.validate_on_submit():
+        post = Post(body=form.post.data, author=current_user)
+        db.session.add(post)
+        db.session.commit()
+    posts = db.session.scalars(current_user.following_posts()).all()
+    return  render_template("index.html", title ='Home Page', form=form,
+                             posts = posts)
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:#Если пользователь авторизован, возвращаем index ссылку
@@ -69,7 +63,8 @@ def user(username):
         {'author' : user, 'body': 'Test post #1'},
         {'author' : user, 'body': 'Test post #2'}
     ]
-    return render_template('user.html', posts = posts, user=user)
+    form = EmptyForm()
+    return render_template('user.html', posts = posts, user=user, form=form)
 @app.route('/logout', methods=['GET', 'POST'])
 def logout():
     logout_user()
@@ -93,3 +88,50 @@ def edit_profile():
         form.username.data = current_user.username
         form.about_me.data = current_user.about_me
     return render_template('edit_profile.html', title='Edit Profile', form=form)
+@app.route('/follow/<username>', methods=['POST'])
+@login_required
+def follow(username):
+    form = EmptyForm()
+    if form.validate_on_submit():
+        user = db.session.scalar(
+            sa.select(User).where(User.username == username)
+        )
+        if user is None:
+            flash(f'Пользователь {username} не найден.')
+            return redirect(url_for('index'))
+        if user == current_user:
+            flash(f'Вы не можете подписаться на самого себя')
+            return redirect(url_for('index', user=username))
+        current_user.follow(user)
+        db.session.commit()
+        flash(f'Вы подписались на {username}!')
+        return redirect(url_for('user', username=username))
+    else:
+        return redirect(url_for('index'))
+    
+@app.route('/unfollow/<username>', methods = ['POST'])
+@login_required
+def unfollow(username):
+    form = EmptyForm()
+    if form.validate_on_submit():
+        user = db.session.scalar(
+            sa.select(User).where(User.username == username)
+        )
+        if user is None:
+            flash(f'пользователь {username} не найден')
+            return redirect(url_for('index'))
+        if user == current_user:
+            flash(f'нельзя отписаться от самого себя')
+            return redirect(url_for('index', username=username))
+        current_user.unfollow(user)
+        db.session.commit()
+        flash(f'Вы отписались от {username}.')
+        return redirect(url_for('user', username=username))
+    else:
+        return redirect(url_for('index'))
+@app.route('/explore')
+@login_required
+def explore():
+    query = sa.select(Post). order_by(Post.timestamp.desc())
+    posts = db.session.scalar(query).all()
+    return render_template('index.html', title = "Explore", posts=posts)

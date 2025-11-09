@@ -1,0 +1,110 @@
+2025-10-16 18:00:29,845 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-16 18:00:38,955 ERROR: Exception on /edit_profile [GET] [in C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Miha\BankApp2\FlaskPractice\app\routes.py", line 85, in edit_profile
+    form = EditProfileForm()
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\wtforms\form.py", line 209, in __call__
+    return type.__call__(cls, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+TypeError: EditProfileForm.__init__() missing 1 required positional argument: 'original_username'
+2025-10-16 18:02:00,680 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-16 18:02:07,379 ERROR: Exception on /edit_profile [GET] [in C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Miha\BankApp2\FlaskPractice\app\routes.py", line 85, in edit_profile
+    form = EditProfileForm()
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\wtforms\form.py", line 209, in __call__
+    return type.__call__(cls, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+TypeError: EditProfileForm.__init__() missing 1 required positional argument: 'original_username'
+2025-10-16 18:03:30,201 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-19 12:12:33,173 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-20 21:58:19,188 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-20 21:58:25,766 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-20 21:58:47,841 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-20 21:59:04,740 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-20 21:59:16,874 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-22 18:19:01,571 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-22 18:29:10,832 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-22 18:34:03,235 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-22 18:39:48,803 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-22 18:42:21,791 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-22 18:42:56,677 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-22 19:13:05,627 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-22 19:13:05,651 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-22 19:13:05,651 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-22 19:14:02,411 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-22 19:14:02,433 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-22 19:14:02,433 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-22 19:14:24,631 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-22 19:51:09,608 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-22 19:58:45,830 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-22 19:58:59,544 ERROR: Exception on /user/orns [GET] [in C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Miha\BankApp2\FlaskPractice\app\routes.py", line 74, in user
+    return render_template('user.html', posts = posts, user=user, form=form)
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Miha\BankApp2\FlaskPractice\app\templates\user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\Miha\BankApp2\FlaskPractice\app\templates\base.html", line 33, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Miha\BankApp2\FlaskPractice\app\templates\user.html", line 33, in block 'content'
+    <form action="{{ url_for('follow', user = user.username) }}" method="post">
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'follow' with values ['user']. Did you forget to specify values ['username']?
+2025-10-22 20:01:24,597 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]

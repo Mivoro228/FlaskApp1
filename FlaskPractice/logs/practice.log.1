@@ -1,0 +1,140 @@
+2025-10-22 20:01:33,819 ERROR: Exception on /user/orns [GET] [in C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Miha\BankApp2\FlaskPractice\app\routes.py", line 74, in user
+    return render_template('user.html', posts = posts, user=user, form=form)
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Miha\BankApp2\FlaskPractice\app\templates\user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\Miha\BankApp2\FlaskPractice\app\templates\base.html", line 33, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Miha\BankApp2\FlaskPractice\app\templates\user.html", line 34, in block 'content'
+    {{ form.hidden_tag() }}
+    ^^^^^^^^^^^^^^^^^
+TypeError: FlaskForm.hidden_tag() missing 1 required positional argument: 'self'
+2025-10-22 20:32:57,514 ERROR: Exception on /user/orns [GET] [in C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Miha\BankApp2\FlaskPractice\app\routes.py", line 74, in user
+    return render_template('user.html', posts = posts, user=user, form=form)
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Miha\BankApp2\FlaskPractice\app\templates\user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\Miha\BankApp2\FlaskPractice\app\templates\base.html", line 33, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Miha\BankApp2\FlaskPractice\app\templates\user.html", line 34, in block 'content'
+    {{ form.hidden_tag() }}
+    ^^^^^^^^^^^^^^^^^
+TypeError: FlaskForm.hidden_tag() missing 1 required positional argument: 'self'
+2025-10-22 20:32:57,687 ERROR: Exception on /user/orns [GET] [in C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Miha\BankApp2\FlaskPractice\app\routes.py", line 74, in user
+    return render_template('user.html', posts = posts, user=user, form=form)
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Miha\BankApp2\FlaskPractice\app\templates\user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\Miha\BankApp2\FlaskPractice\app\templates\base.html", line 33, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Miha\BankApp2\FlaskPractice\app\templates\user.html", line 34, in block 'content'
+    {{ form.hidden_tag() }}
+    ^^^^^^^^^^^^^^^^^
+TypeError: FlaskForm.hidden_tag() missing 1 required positional argument: 'self'
+2025-10-22 20:34:34,138 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-22 20:34:54,276 ERROR: Exception on /follow/orns [POST] [in C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Miha\BankApp2\FlaskPractice\app\routes.py", line 102, in follow
+    if form.validate_on_submit():
+       ~~~~~~~~~~~~~~~~~~~~~~~^^
+TypeError: FlaskForm.validate_on_submit() missing 1 required positional argument: 'self'
+2025-10-23 14:42:31,486 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-23 14:43:10,387 ERROR: Exception on /follow/orns [POST] [in C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Miha\BankApp2\FlaskPractice\app\routes.py", line 102, in follow
+    if form.validate_on_submit():
+       ~~~~~~~~~~~~~~~~~~~~~~~^^
+TypeError: FlaskForm.validate_on_submit() missing 1 required positional argument: 'self'

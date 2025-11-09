@@ -1,5 +1,5 @@
-2025-10-16 18:00:29,845 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
-2025-10-16 18:00:38,955 ERROR: Exception on /edit_profile [GET] [in C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py:875]
+2025-10-23 14:56:59,258 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-23 14:57:03,488 ERROR: Exception on /unfollow/orns [POST] [in C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py:875]
 Traceback (most recent call last):
   File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
     response = self.full_dispatch_request()
@@ -13,14 +13,20 @@ Traceback (most recent call last):
   File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
     return current_app.ensure_sync(func)(*args, **kwargs)
            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "C:\Users\Miha\BankApp2\FlaskPractice\app\routes.py", line 85, in edit_profile
-    form = EditProfileForm()
-  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\wtforms\form.py", line 209, in __call__
-    return type.__call__(cls, *args, **kwargs)
-           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
-TypeError: EditProfileForm.__init__() missing 1 required positional argument: 'original_username'
-2025-10-16 18:02:00,680 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
-2025-10-16 18:02:07,379 ERROR: Exception on /edit_profile [GET] [in C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py:875]
+  File "C:\Users\Miha\BankApp2\FlaskPractice\app\routes.py", line 136, in unfollow
+    return redirect('user', username = username)
+TypeError: redirect() got an unexpected keyword argument 'username'
+2025-10-23 14:58:33,205 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-23 14:59:23,537 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-23 21:30:54,153 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-23 21:30:54,198 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-23 21:30:54,198 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-23 21:31:13,683 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-23 21:32:20,664 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-25 15:08:22,383 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-10-25 15:08:26,478 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-11-07 19:27:04,392 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+2025-11-07 19:27:20,462 ERROR: Exception on /index [GET] [in C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py:875]
 Traceback (most recent call last):
   File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
     response = self.full_dispatch_request()
@@ -34,16 +40,44 @@ Traceback (most recent call last):
   File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
     return current_app.ensure_sync(func)(*args, **kwargs)
            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "C:\Users\Miha\BankApp2\FlaskPractice\app\routes.py", line 85, in edit_profile
-    form = EditProfileForm()
-  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\wtforms\form.py", line 209, in __call__
-    return type.__call__(cls, *args, **kwargs)
-           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
-TypeError: EditProfileForm.__init__() missing 1 required positional argument: 'original_username'
-2025-10-16 18:03:30,201 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
-2025-10-19 12:12:33,173 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
-2025-10-20 21:58:19,188 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
-2025-10-20 21:58:25,766 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
-2025-10-20 21:58:47,841 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
-2025-10-20 21:59:04,740 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
-2025-10-20 21:59:16,874 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
+  File "C:\Users\Miha\BankApp2\FlaskPractice\app\routes.py", line 24, in index
+    posts = db.session.scalars(current_user.following_posts().all())
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Select' object has no attribute 'all'
+2025-11-07 19:27:22,166 ERROR: Exception on /index [GET] [in C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Miha\BankApp2\FlaskPractice\app\routes.py", line 24, in index
+    posts = db.session.scalars(current_user.following_posts().all())
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Select' object has no attribute 'all'
+2025-11-07 19:30:53,313 ERROR: Exception on /index [GET] [in C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Miha\BankApp2\venv\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Miha\BankApp2\FlaskPractice\app\routes.py", line 24, in index
+    posts = db.session.scalars(current_user.following_posts()).all()
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Select' object has no attribute 'all'
+2025-11-07 19:30:58,049 INFO: Microblog startup [in C:\Users\Miha\BankApp2\FlaskPractice\app\__init__.py:41]
